@@ -1,0 +1,33 @@
+//
+// Prefix header for all source files of the 'Netzwierk' target in the 'Netzwierk' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_7_0
+#warning "This project uses features only available in iOS SDK 7.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MobileCoreServices/UTCoreTypes.h>
+#import "ESCache.h"
+#import "ESConstants.h"
+#import "ESUtility.h"
+
+//Firebase headers
+#import "Firebase.h"
+
+//Parse headers
+#import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+
+//other
+#import "ProgressHUD.h"
+#endif
+

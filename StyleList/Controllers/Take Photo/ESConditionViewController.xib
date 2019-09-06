@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4144" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GT-Walsheim-Regular.ttf">
+            <string>GTWalsheimRegular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ESConditionViewController">
+            <connections>
+                <outlet property="tblCondition" destination="RjN-kR-k17" id="i2D-V1-STi"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jP-Bc-DE5">
+                    <rect key="frame" x="147.5" y="20" width="80.5" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="26" id="mzx-dU-qzT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GTWalsheimRegular" family="GT Walsheim" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asF-B4-hwv">
+                    <rect key="frame" x="0.0" y="8" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="J8k-QO-DnC"/>
+                        <constraint firstAttribute="height" constant="50" id="m8d-rd-2xr"/>
+                    </constraints>
+                    <state key="normal" image="btn_Back.png"/>
+                    <connections>
+                        <action selector="backClicked:" destination="-1" eventType="touchUpInside" id="wsc-bY-ubb"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r2-08-pDR">
+                    <rect key="frame" x="0.0" y="55" width="375" height="1"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="N7a-HF-T5d"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.8615722656" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RjN-kR-k17">
+                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="vCN-E3-5Xa"/>
+                        <outlet property="delegate" destination="-1" id="h0u-ay-M5p"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="RjN-kR-k17" secondAttribute="trailing" id="10h-Ns-VqB"/>
+                <constraint firstAttribute="bottom" secondItem="RjN-kR-k17" secondAttribute="bottom" id="4zQ-59-9UV"/>
+                <constraint firstItem="asF-B4-hwv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="GPJ-UF-jya"/>
+                <constraint firstItem="3jP-Bc-DE5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="MLM-nS-naA"/>
+                <constraint firstItem="RjN-kR-k17" firstAttribute="top" secondItem="4r2-08-pDR" secondAttribute="bottom" id="Rdu-q8-O28"/>
+                <constraint firstItem="3jP-Bc-DE5" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aBl-P7-bhx"/>
+                <constraint firstItem="RjN-kR-k17" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cFg-SF-FdB"/>
+                <constraint firstAttribute="trailing" secondItem="4r2-08-pDR" secondAttribute="trailing" id="cNk-eP-MYd"/>
+                <constraint firstItem="RjN-kR-k17" firstAttribute="top" secondItem="4r2-08-pDR" secondAttribute="bottom" id="eMN-wA-Yfy"/>
+                <constraint firstItem="4r2-08-pDR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="lIU-WT-6BM"/>
+                <constraint firstItem="4r2-08-pDR" firstAttribute="top" secondItem="3jP-Bc-DE5" secondAttribute="bottom" constant="9" id="rO3-Mh-NW6"/>
+                <constraint firstItem="asF-B4-hwv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t0K-0X-n56"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="af6-5g-99s"/>
+            <point key="canvasLocation" x="36" y="-378"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_Back.png" width="50" height="50"/>
+    </resources>
+</document>

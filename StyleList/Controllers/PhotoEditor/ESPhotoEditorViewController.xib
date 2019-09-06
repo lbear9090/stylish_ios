@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4144" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GT-Walsheim-Regular.ttf">
+            <string>GTWalsheimRegular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ESPhotoEditorViewController">
+            <connections>
+                <outlet property="btnCrop" destination="61f-ZI-hb2" id="vdC-4H-y2J"/>
+                <outlet property="btnDraw" destination="484-E0-F6q" id="5bL-V7-hXg"/>
+                <outlet property="btnMagnification" destination="mOE-fB-vhx" id="ZLf-xn-DsD"/>
+                <outlet property="drawImgView" destination="JAf-AA-sEZ" id="4hH-Q7-YFH"/>
+                <outlet property="drawView" destination="95a-u4-rkt" id="9Kn-9C-Qj5"/>
+                <outlet property="tempImageView" destination="Qg2-W6-CQk" id="Jdp-7G-9Gs"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vc5-hw-Vec">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5M-W4-Qxl">
+                            <rect key="frame" x="0.0" y="29" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Inx-ss-QbQ"/>
+                                <constraint firstAttribute="height" constant="40" id="xmS-iJ-cOf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GTWalsheimRegular" family="GT Walsheim" pointSize="15"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnCancelClicked:" destination="-1" eventType="touchUpInside" id="GLK-jS-Au2"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntB-lv-KRn">
+                            <rect key="frame" x="125" y="38" width="70" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="reS-I3-kG1"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GTWalsheimRegular" family="GT Walsheim" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0k-Gy-bgh">
+                            <rect key="frame" x="270" y="29" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="RjF-Zi-am7"/>
+                                <constraint firstAttribute="width" constant="50" id="lke-O4-8UT"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="GTWalsheimRegular" family="GT Walsheim" pointSize="15"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnDoneClicked:" destination="-1" eventType="touchUpInside" id="0Od-xu-V9n"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ntB-lv-KRn" secondAttribute="bottom" constant="11" id="29h-oh-cKq"/>
+                        <constraint firstItem="ntB-lv-KRn" firstAttribute="centerX" secondItem="Vc5-hw-Vec" secondAttribute="centerX" id="8mW-BX-QWX"/>
+                        <constraint firstItem="ntB-lv-KRn" firstAttribute="top" secondItem="Vc5-hw-Vec" secondAttribute="top" constant="38" id="AHS-9G-aBJ"/>
+                        <constraint firstAttribute="trailing" secondItem="D0k-Gy-bgh" secondAttribute="trailing" id="M0k-cu-klk"/>
+                        <constraint firstItem="Z5M-W4-Qxl" firstAttribute="leading" secondItem="Vc5-hw-Vec" secondAttribute="leading" id="j25-uM-qfW"/>
+                        <constraint firstAttribute="height" constant="70" id="mqW-iS-ieG"/>
+                        <constraint firstItem="D0k-Gy-bgh" firstAttribute="top" secondItem="Vc5-hw-Vec" secondAttribute="top" constant="29" id="qo0-gM-kTT"/>
+                        <constraint firstItem="Z5M-W4-Qxl" firstAttribute="top" secondItem="Vc5-hw-Vec" secondAttribute="top" constant="29" id="xSu-f5-u0b"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="95a-u4-rkt">
+                    <rect key="frame" x="0.0" y="70" width="320" height="423"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JAf-AA-sEZ">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="423"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qg2-W6-CQk">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="423"/>
+                            <gestureRecognizers/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Qg2-W6-CQk" secondAttribute="trailing" id="HnY-W0-z4l"/>
+                        <constraint firstItem="JAf-AA-sEZ" firstAttribute="leading" secondItem="95a-u4-rkt" secondAttribute="leading" id="VBo-y7-Zol"/>
+                        <constraint firstItem="Qg2-W6-CQk" firstAttribute="top" secondItem="95a-u4-rkt" secondAttribute="top" id="hc4-6q-3No"/>
+                        <constraint firstItem="Qg2-W6-CQk" firstAttribute="leading" secondItem="95a-u4-rkt" secondAttribute="leading" id="m6z-PP-1OV"/>
+                        <constraint firstItem="JAf-AA-sEZ" firstAttribute="top" secondItem="95a-u4-rkt" secondAttribute="top" id="mHK-9O-icl"/>
+                        <constraint firstAttribute="trailing" secondItem="JAf-AA-sEZ" secondAttribute="trailing" id="qQB-AQ-xyi"/>
+                        <constraint firstAttribute="bottom" secondItem="Qg2-W6-CQk" secondAttribute="bottom" id="sXp-Dk-jFF"/>
+                        <constraint firstAttribute="bottom" secondItem="JAf-AA-sEZ" secondAttribute="bottom" id="uZQ-ve-Tjc"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToX-1G-SUy">
+                    <rect key="frame" x="0.0" y="493" width="320" height="75"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="484-E0-F6q">
+                            <rect key="frame" x="140" y="17" width="40" height="40"/>
+                            <state key="normal" backgroundImage="draw_white.png"/>
+                            <connections>
+                                <action selector="btnDrawClicked:" destination="-1" eventType="touchUpInside" id="6ft-q6-Pph"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61f-ZI-hb2">
+                            <rect key="frame" x="210" y="17" width="40" height="40"/>
+                            <state key="normal" image="crop_white.png"/>
+                            <connections>
+                                <action selector="btnCropClicked:" destination="-1" eventType="touchUpInside" id="GGW-wv-rYj"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOE-fB-vhx">
+                            <rect key="frame" x="65" y="18" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="1mH-Ow-HgZ"/>
+                                <constraint firstAttribute="height" constant="40" id="DCj-pD-oSi"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="btnMagnification_dis.png"/>
+                            <connections>
+                                <action selector="btnMagnifierClicked:" destination="-1" eventType="touchUpInside" id="ShX-vS-d0f"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="61f-ZI-hb2" firstAttribute="top" secondItem="ToX-1G-SUy" secondAttribute="top" constant="17" id="4AO-K9-Rwk"/>
+                        <constraint firstItem="484-E0-F6q" firstAttribute="centerX" secondItem="ToX-1G-SUy" secondAttribute="centerX" id="B4w-BH-JsI"/>
+                        <constraint firstAttribute="bottom" secondItem="mOE-fB-vhx" secondAttribute="bottom" constant="17" id="OeE-5o-G2S"/>
+                        <constraint firstAttribute="bottom" secondItem="61f-ZI-hb2" secondAttribute="bottom" constant="18" id="Vzf-b0-jRL"/>
+                        <constraint firstItem="mOE-fB-vhx" firstAttribute="leading" secondItem="ToX-1G-SUy" secondAttribute="leading" constant="65" id="c9z-s7-pVQ"/>
+                        <constraint firstAttribute="trailing" secondItem="61f-ZI-hb2" secondAttribute="trailing" constant="70" id="gAf-3d-lJ8"/>
+                        <constraint firstAttribute="height" constant="75" id="oj7-oI-Qf0"/>
+                        <constraint firstItem="484-E0-F6q" firstAttribute="centerY" secondItem="ToX-1G-SUy" secondAttribute="centerY" id="sBo-9c-u4f"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kz5-ve-4Q4">
+                    <rect key="frame" x="0.0" y="70" width="320" height="59"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press draw icon and draw around an item you wish to tag for sale, hire or inspiration. Then press 'Done' to continue." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOf-ab-FHN">
+                            <rect key="frame" x="8" y="0.0" width="304" height="59"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="GTWalsheimRegular" family="GT Walsheim" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n36-fE-w4d">
+                    <rect key="frame" x="0.0" y="465" width="320" height="41"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alternatively, press 'Done' without drawing to post without tagging an item." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5M-M0-1T1">
+                            <rect key="frame" x="8" y="0.0" width="304" height="41"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" name="GTWalsheimRegular" family="GT Walsheim" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ToX-1G-SUy" secondAttribute="bottom" id="1YV-MM-hMD"/>
+                <constraint firstItem="95a-u4-rkt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3AN-PC-3aH"/>
+                <constraint firstItem="Vc5-hw-Vec" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J0q-QQ-Ouu"/>
+                <constraint firstAttribute="trailing" secondItem="95a-u4-rkt" secondAttribute="trailing" id="Jgy-9t-gMr"/>
+                <constraint firstAttribute="trailing" secondItem="Vc5-hw-Vec" secondAttribute="trailing" id="PTZ-R3-5Cz"/>
+                <constraint firstItem="95a-u4-rkt" firstAttribute="top" secondItem="Vc5-hw-Vec" secondAttribute="bottom" id="cPj-Dr-Fdx"/>
+                <constraint firstItem="ToX-1G-SUy" firstAttribute="top" secondItem="95a-u4-rkt" secondAttribute="bottom" id="gZq-Cl-C3v"/>
+                <constraint firstItem="ToX-1G-SUy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="k5i-sF-HQm"/>
+                <constraint firstAttribute="trailing" secondItem="ToX-1G-SUy" secondAttribute="trailing" id="omv-b6-mFu"/>
+                <constraint firstItem="Vc5-hw-Vec" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qnQ-R5-kla"/>
+            </constraints>
+            <point key="canvasLocation" x="25" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btnMagnification_dis.png" width="50" height="50"/>
+        <image name="crop_white.png" width="40" height="40"/>
+        <image name="draw_white.png" width="40" height="40"/>
+    </resources>
+</document>
